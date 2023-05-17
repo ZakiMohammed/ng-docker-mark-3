@@ -1,27 +1,27 @@
-# NgDockerMark3
+# NgDocker - Mark 3
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Check out the CodeOmelet blog post for this project.
 
-## Development server
+Link: https://codeomelet.com/posts/nginx-cache-config-for-dockerized-angular-app-ngdocker
+___
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Nginx cache configuration for Angular and Docker powered by Cirrus UI.
 
-## Code scaffolding
+## Build Docker Image and Run Docker Container
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+# build image
+docker build -t ng-docker:mark-3 .
 
-## Build
+# run container
+docker run -p 3300:80 --name ng-docker-mark-3-container-1 ng-docker:mark-3
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# list images
+docker image ls
 
-## Running unit tests
+# stop container
+docker stop ng-docker-mark-3-container-1
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# remove container
+docker rm ng-docker-mark-3-container-1
+```

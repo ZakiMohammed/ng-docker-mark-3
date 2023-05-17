@@ -1,0 +1,42 @@
+<div class="header u-unselectable header-animated mb-0">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a
+        ><h6 class="title"><span class="text-red-700">Ng</span><span class="text-blue-500">Docker</span></h6></a
+      >
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-right">
+      <div class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
+        <a [routerLink]="['/']">
+          <span class="icon mr-1">
+            <i class="fas fa-wrapper fa-home" aria-hidden="true"></i>
+          </span>
+          Home
+        </a>
+      </div>
+      <div class="nav-item" [routerLinkActive]="'active'">
+        <a [routerLink]="['/posts']">
+          <span class="icon mr-1">
+            <i class="fas fa-wrapper fa-flask" aria-hidden="true"></i>
+          </span>
+          Posts
+        </a>
+      </div>
+      <div class="nav-item" [routerLinkActive]="'active'">
+        <a [routerLink]="['/users']">
+          <span class="icon mr-1">
+            <i class="fas fa-wrapper fa-user" aria-hidden="true"></i>
+          </span>
+          Users
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
